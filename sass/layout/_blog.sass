@@ -1,0 +1,61 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+
+.blog
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    padding: 20px 0
+
+    h6
+        margin: 40px 0
+
+        &:before, &:after
+            content: ""
+            display: block
+            border-top: 2px solid red
+            max-width: 70px
+            margin: 20px auto
+            
+    &__wrap
+        width: 80%
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr))
+        grid-gap: 20px
+
+
+    &__card
+
+        img
+            width: 100%
+        
+        h4
+            margin-bottom: 10px
+            color: red
+            
+        span
+            font-size: .7em
+            
+
+        p
+            margin-top: 20px
+
+        a
+            border: 1px solid gray
+            color: black
+            margin-top: 40px
+
+            &:hover, &:focus
+                background: #212121
+                color: white
+
+    &__divider
+        border-bottom: 1px solid #eee
+        max-width: 90%
+        margin: 20px 0
+
+        
+
+        

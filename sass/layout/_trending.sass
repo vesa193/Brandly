@@ -1,0 +1,84 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.trending
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    +background('../img/items-bg.jpg', center, no-repeat)
+    background-size: cover
+    //height: 918px
+
+    h6
+        margin: 40px 0
+
+        &:before, &:after
+            content: ""
+            display: block
+            border-top: 2px solid red
+            max-width: 70px
+            margin: 20px auto
+
+    &__wrap
+        //width: 80%
+        display: grid
+        //grid-template-columns: repeat(auto-fill, minmax(400px, 1fr))
+        grid-gap: 20px
+
+    img
+        width: 100%
+
+
+    &__text
+        display: flex
+        flex-direction: column
+        justify-content: center
+
+        h4
+            margin-bottom: 20px
+            color: red
+
+        span
+            margin-bottom: 20px
+
+        p
+            margin-bottom: 20px
+
+    &__sizes
+        width: 50%
+        display: flex
+        justify-content: space-between
+        margin: 40px 0
+
+        a
+            border: 1px solid gray
+            color: gray
+
+            &:hover, &:focus
+                background: gray
+                color: white
+
+    &__buttons
+    
+        a
+            border: 1px solid gray
+            color: gray
+            
+            &:nth-of-type(1)
+                margin-right: 25px
+
+            &:hover, &:focus
+                background: gray
+                color: white
+
+    &__indicators
+        margin: 40px 0
+
+        img
+            width: auto
+
+
+.active
+    background: gray
+    color: white !important

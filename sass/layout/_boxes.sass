@@ -1,0 +1,103 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.boxes
+    display: flex
+    justify-content: center
+    text-align: center
+    padding: 20px 0
+
+    h6
+        margin: 20px auto
+
+        &:before, &:after
+            content: ""
+            display: block
+            border-top: 2px solid red
+            max-width: 70px
+            margin: 20px auto
+
+
+    &__wrap
+        width: 80%
+        display: grid
+        grid-gap: 20px
+        
+    &__row1
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(371px, 1fr))
+        grid-gap: 20px
+
+  
+
+    &__row2
+        display: grid
+        grid-template-columns: repeat(auto-fit, minmax(570px, 1fr))
+        grid-gap: 20px
+
+    
+    &__card
+        position: relative
+
+        img
+            width: 100%
+            height: auto
+
+        &:hover, &:focus
+            
+            .boxes__overlay
+                opacity: 1
+
+    &__overlay
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        top: 0
+        left: 0
+        width: 100%
+        height: calc(100% - 1%)
+        background: rgba(0, 0, 0, .6)
+        opacity: 0
+        +transition(all, .3s, ease-in-out)
+
+    &__frame
+        border: 2px solid white
+        padding: 150px
+        width: 80%
+        height: 80%
+        position: absolute
+        padding: 20px
+        display: flex
+        justify-content: center
+        align-items: center
+
+        span
+            font-style: italic
+            font-weight: 300
+            font-size: 1.1em
+            color: white
+
+        h4
+            font-family: $base-font
+            font-size: 2.3em
+            font-weight: bold
+            color: white
+            
+
+            &:before, &:after
+                content: ""
+                display: block
+                border-top: 2px solid white
+                max-width: 180px
+                margin: 20px auto
+
+            
+            
+
+
+
+
+
+
+

@@ -1,0 +1,66 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.subs
+    display: flex
+    justify-content: center
+    +background('../img/subscribe-bg.jpg', center, no-repeat)
+    background-size: cover
+    padding: 40px 0
+    margin-top: 40px
+
+    &__wrap
+        width: 80%
+        display: grid
+        //grid-template-columns: repeat(2, minmax(200px, 1fr))
+        
+
+    &__subscribe
+
+        p
+            color: white
+
+    &__input
+        position: relative
+        display: flex
+        justify-content: space-between
+        
+        input
+            width: 90%
+            padding: 10px 80px
+            background: transparent
+            color: white
+            border: 1px solid white
+            opacity: 1
+
+            &::placeholder
+                color: white
+                opacity: 1
+
+        img
+            position: absolute
+            top: 14px
+            left: 20px
+
+    &__btn
+        width: 100%
+        display: flex
+        justify-content: center
+        
+        a
+            max-width: 200px
+            display: flex
+            justify-content: center
+            display: flex
+            justify-content: center
+            align-items: center
+            background: white
+            color: black
+            font-weight: bold
+            padding: 10px 60px
+
+            &:hover, &:focus
+                background: #212121
+                color: white
+        
+        

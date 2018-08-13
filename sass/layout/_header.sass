@@ -1,0 +1,82 @@
+@import ../helpers/mixins
+@import ../helpers/vars
+
+.header
+    width: 100%
+    height: 867px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    flex-direction: column
+    +background('../img/bg-slider.jpg', center, no-repeat)
+    background-size: cover
+    overflow: hidden
+
+    &__content
+        //height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        color: #fff
+
+        h1
+            margin: 20px 0
+            
+
+        h3
+            &:nth-of-type(2)
+                letter-spacing: 0
+
+        a
+            margin-top: 20px
+
+            &:hover, &:focus
+                color: #ccc
+                border-color: #ccc
+
+
+    &__slider
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 0 20px
+        text-align: center
+        
+        a
+            &:hover, &:focus
+                background: white
+                color: #212121
+
+        &__indicators
+            margin-bottom: 40px
+
+
+.nav    
+    width: 80%
+    padding-top: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+    &__items
+        width: 60%
+        display: flex
+        justify-content: space-around
+
+        
+
+        li 
+            a
+                color: white
+
+                &:hover, &:focus
+                    color: #ccc
+    &__hamburger
+        width: 14px
+        height: 14px
+        cursor: pointer
+
+
+

@@ -45,25 +45,42 @@ $screen-md-max: ($screen-lg-min - 1);
             position: absolute
             top: 80px
             left: 0
-            padding: 20px
+            padding: 40px
             background: #4d4d4d 
             box-shadow: 2px 2px 20px #212121
-            +transition(all, .3s, ease-in-out)
+            opacity: 1
+            +transition(all, .4s, ease-in-out)
 
             &--close
-                transform: translateX(-110%)
-                +transition(transform, .3s, ease-in-out)
+                transform: translate(-110%, 0%)
+                opacity: 0
+                +transition(all, .4s, ease-in-out)
 
 
     //trending
     .trending
         height: auto
-        padding: 0 20px
+        padding: 0 40px
+
+        &__wrap
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
 
         &__text
 
             span
                 font-size: .9em
+
+        &__img
+            img
+                width: 100%
+
+        &__sizes
+            width: 100%
+
+        &__buttons
+
+            &:nth-of-type(1)
+                margin-right: 0
 
     //boxes
     .boxes
@@ -110,10 +127,11 @@ $screen-md-max: ($screen-lg-min - 1);
 
             input
                 width: 100%
+                padding-left: 60px
 
             img
                 top: 14px
-                left: 40px
+                //left: 40px
 
         &__btn
             display: grid
@@ -158,14 +176,16 @@ $screen-md-max: ($screen-lg-min - 1);
             position: absolute
             top: 80px
             left: 0
-            padding: 20px
+            padding: 40px
             background: #4d4d4d 
             box-shadow: 2px 2px 20px #212121
-            +transition(transform, .3s, ease-in-out)
+            opacity: 1
+            +transition(all, .4s, ease-in-out)
 
             &--close
-                transform: translateX(-110%)
-                +transition(transform, .3s, ease-in-out)
+                transform: translate(-110%, 0%)
+                opacity: 0
+                +transition(all, .4s, ease-in-out)
 
     .subs
         display: flex
@@ -184,8 +204,14 @@ $screen-md-max: ($screen-lg-min - 1);
         &__input
             justify-content: center
 
+            input
+                width: 100%
+                padding-left: 60px
+
             img
-                left: 60px
+                top: 17px
+                //left: 40px
+
 
 
 
@@ -258,8 +284,15 @@ $screen-md-max: ($screen-lg-min - 1);
         &__input
             justify-content: center
 
+            input
+                width: 100%
+                padding-left: 60px
+
             img
-                left: 60px
+                top: 17px
+                //left: 40px
+
+            
 
  
 
@@ -288,12 +321,28 @@ $screen-md-max: ($screen-lg-min - 1);
 
         &__wrap
             grid-template-columns: repeat(2,minmax(200px,1fr))
+
+        &__input
+
+            input
+                padding: 10px 80px
+
     //trending
     .trending
-        height: 918px
+        
 
         &__wrap
             width: 80%
             grid-template-columns: repeat(auto-fill,minmax(500px,1fr))
+
+        &__sizes
+            width: 50%
+
+        &__buttons
+
+            &__buttons
+
+            &:nth-of-type(1)
+                margin-right: 25px
 
                

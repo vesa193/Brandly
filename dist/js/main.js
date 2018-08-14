@@ -13,3 +13,12 @@ hamb.addEventListener('click', function () {
     let menu = document.querySelector('.nav__items')
     menu.classList.toggle('nav__items--close')
 })
+
+
+
+const headerContent = document.querySelector('.header__content')
+
+window.addEventListener('load', function () {
+    headerContent.classList.add('header__content--fade')
+    //console.log('radi')
+})

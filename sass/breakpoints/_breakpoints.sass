@@ -5,6 +5,7 @@
 
 // Defined values
 $screen-xs-min: 320px;
+$screen-helper: 420px;
 $screen-sm-min: 768px;
 $screen-xs-max: ($screen-sm-min - 1);
 $screen-md-min: 992px;
@@ -12,7 +13,28 @@ $screen-sm-max: ($screen-md-min - 1);
 $screen-lg-min: 1200px;
 $screen-md-max: ($screen-lg-min - 1);
 
+ 
 
+
+@media all and (min-width: $screen-xs-min) and (max-width: $screen-helper)
+    //boxes
+    .boxes
+
+
+
+        &__row1
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, auto)
+            grid-template-areas: "man" "woman" "watch"
+            grid-gap: 20px
+
+        &__row2
+            display: grid
+            grid-template-columns: 1fr 
+            grid-template-rows: repeat(2, auto)
+            grid-template-areas: "woman1" "woman2"
+            grid-gap: 20px
 
 @media all and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) 
 
@@ -57,6 +79,8 @@ $screen-md-max: ($screen-lg-min - 1);
                 opacity: 0
                 +transition(all, .4s, ease-in-out)
 
+            
+
 
     //trending
     .trending
@@ -90,7 +114,35 @@ $screen-md-max: ($screen-lg-min - 1);
             display: grid
             grid-template-columns: repeat(auto-fit,minmax(250px,1fr))
 
+
+
+        &__row1
+            display: grid
+            grid-template-columns: 1fr
+            grid-template-rows: repeat(3, auto)
+            grid-template-areas: "man" "woman" "watch"
+            grid-gap: 20px
+
+        &__row2
+            display: grid
+            grid-template-columns: 1fr 
+            grid-template-rows: repeat(2, auto)
+            grid-template-areas: "woman1" "woman2"
+            grid-gap: 20px
+
+
         &__card
+
+            &--man
+                grid-area: man
+            &--woman
+                grid-area: woman
+            &--watch
+                grid-area: watch
+            &--woman1
+                grid-area: woman1
+            &--woman2
+                grid-area: woman2
 
         &__frame
 
@@ -111,6 +163,8 @@ $screen-md-max: ($screen-lg-min - 1);
 
             a
                 text-align: center
+
+    
 
                 
 
@@ -151,6 +205,9 @@ $screen-md-max: ($screen-lg-min - 1);
             
 
 
+
+
+
 //small devices (tablet, notebook)
 
 @media all and (min-width: $screen-sm-min) and (max-width: $screen-sm-max) 
@@ -189,6 +246,37 @@ $screen-md-max: ($screen-lg-min - 1);
                 transform: translate(-110%, 0%)
                 opacity: 0
                 +transition(all, .4s, ease-in-out)
+
+    //boxes
+    .boxes
+
+        &__row1
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: repeat(3, auto)
+            grid-template-areas: "man woman" "watch watch" "woman1 woman2"
+            grid-gap: 20px
+
+        &__row2
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-template-rows: repeat(3, auto)
+            grid-template-areas: "man woman" "watch watch" "woman1 woman2"
+            grid-gap: 20px
+
+
+        &__card
+
+            &--man
+                grid-area: man
+            &--woman
+                grid-area: woman
+            &--watch
+                grid-area: watch
+            &--woman1
+                grid-area: woman1
+            &--woman2
+                grid-area: woman2
 
     .subs
         display: flex
@@ -269,6 +357,37 @@ $screen-md-max: ($screen-lg-min - 1);
         &__wrap
             grid-template-columns: repeat(auto-fill,minmax(300px,1fr))
             width: 80%
+
+    //boxes
+    .boxes
+
+        &__row1
+            display: grid
+            grid-template-columns: 1fr 1fr 1fr 
+            grid-template-rows: repeat(1,auto)
+            grid-template-areas: "man woman watch"
+            grid-gap: 20px
+
+        &__row2
+            display: grid
+            grid-template-columns: 1fr 1fr 
+            grid-template-rows: repeat(1,auto)
+            grid-template-areas: "woman1 woman2"
+            grid-gap: 20px
+
+
+        &__card
+
+            &--man
+                grid-area: man
+            &--woman
+                grid-area: woman
+            &--watch
+                grid-area: watch
+            &--woman1
+                grid-area: woman1
+            &--woman2
+                grid-area: woman2
 
 
     //subs

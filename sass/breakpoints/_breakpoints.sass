@@ -16,25 +16,6 @@ $screen-md-max: ($screen-lg-min - 1);
  
 
 
-@media all and (min-width: $screen-xs-min) and (max-width: $screen-helper)
-    //boxes
-    .boxes
-
-
-
-        &__row1
-            display: grid
-            grid-template-columns: 1fr
-            grid-template-rows: repeat(3, auto)
-            grid-template-areas: "man" "woman" "watch"
-            grid-gap: 20px
-
-        &__row2
-            display: grid
-            grid-template-columns: 1fr 
-            grid-template-rows: repeat(2, auto)
-            grid-template-areas: "woman1" "woman2"
-            grid-gap: 20px
 
 @media all and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) 
 
@@ -147,7 +128,7 @@ $screen-md-max: ($screen-lg-min - 1);
         &__frame
 
             h4
-                font-size: 1.2em !important
+                font-size: 1.5em !important
 
     //blog
     .blog
@@ -278,6 +259,11 @@ $screen-md-max: ($screen-lg-min - 1);
             &--woman2
                 grid-area: woman2
 
+        &__frame
+
+            h4
+                font-size: 1.5em !important
+
     .subs
         display: flex
         justify-content: center
@@ -388,6 +374,11 @@ $screen-md-max: ($screen-lg-min - 1);
                 grid-area: woman1
             &--woman2
                 grid-area: woman2
+
+        &__frame
+
+            h4
+                font-size: 1.5em !important
 
 
     //subs
